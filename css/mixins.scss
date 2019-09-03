@@ -1,0 +1,55 @@
+@import "variables";
+
+@mixin flexible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin colorItems($colors, $item, $selector:"") {
+  @for $i from 0 to length($colors) {
+    #{$item}:nth-child(#{$i+1})#{" " + $selector} {
+      background-color: nth($colors, $i+1);
+    }
+  }
+}
+
+@mixin gradientItems($colors, $item, $selector:"") {
+  @for $i from 0 to length($colors) {
+    #{$item}:nth-child(#{$i+1})#{" " + $selector}  {
+      @include setGradient(nth($colors, $i+1));
+    }
+  }
+}
+
+
+@mixin colorBorder ($colors) {
+  @for $i from 0 to length($colors) {
+    .tabs__list:nth-child(#{$i+1}) {
+      .tabs__item--active,
+      .tabs__item:hover {
+        border-color: nth($colors, $i+1);
+        color: $tabsSelectedColor;
+      }
+    }
+  }
+}
+
+@mixin setShadow {
+  box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.21);
+}
+
+@mixin setGradient ($color) {
+  background-image: linear-gradient(lighten($color, 15%) 0%,
+          darken($color, 10%));
+}
+
+@mixin enableCheckbox {
+  i {
+    display: block;
+  }
+  border: none;
+}
+
+
+

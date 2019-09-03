@@ -1,0 +1,255 @@
+@import "variables";
+@import "mixins";
+
+ul, li, p, h2, body {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  border: none;
+  outline: 0;
+  background: none;
+}
+
+.wrapper {
+  padding: 120px 100px;
+  width: 2100px;
+  box-sizing: border-box;
+  background-color: $mainBackgroundColor;
+}
+
+.heading {
+  text-transform: uppercase;
+  font-size: $fontSizeTitles;
+  font-weight: 300;
+  font-family: $fontFamily;
+  margin-bottom: 124px;
+  span {
+  font-weight: 700;
+  }
+}
+
+.container {
+  @include flexible;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.row {
+  @include flexible;
+  justify-content: space-between;
+}
+
+//Buttons styles
+
+.buttons__container {
+  width: 1900px;
+  margin-bottom: 192px;
+  @include colorItems($mainColors, ".buttons__item");
+}
+
+.buttons__row:not(:last-child) {
+  margin-bottom: 100px;
+}
+
+.buttons__item {
+  width: 302px;
+  padding: 32px 0;
+  font-family: $fontFamily;
+  font-size: $fontSizeButtons;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.buttons__row--normal {
+  @include gradientItems($mainColors, ".buttons__item");
+  .buttons__item:hover {
+    background-image: none;
+  }
+  .buttons__item:active {
+    background-image: none;
+    @include setShadow;
+  }
+}
+
+.buttons__row--active .buttons__item {
+  @include setShadow;
+}
+
+//Checkboxes styles
+
+.checkbox__item {
+  display: none;
+}
+
+.checkbox__container {
+   margin-bottom: 146px;
+   width: 386px;
+  @include gradientItems($mainColors, ".checkbox__label", "i");
+}
+
+.checkbox__label {
+    span {
+      display: block;
+      width: $buttonSize;
+      height: $buttonSize;
+      margin-bottom: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: $buttonsBackground;
+      border: 1px solid $buttonsBorder;
+      box-sizing: border-box;
+    }
+    i {
+      display: none; //gradient invisible in usual state
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+      //checkmark styles
+      text-align: center;
+      font-size: $fontSizeCheckboxes;
+      line-height: $buttonSize;
+      color: white;
+    }
+}
+
+.checkbox__row--disabled span {
+  @include enableCheckbox;
+  @include setShadow;
+  opacity: 0.5;
+}
+
+.checkbox__item:checked ~ span {
+  @include enableCheckbox;
+  @include setShadow;
+}
+
+//Paginations styles
+
+.paginations__container {
+  margin-bottom: 150px;
+}
+
+.paginations__list {
+  width: 400px;
+  @include flexible;
+  justify-content: space-between;
+}
+
+.paginations__item {
+  width: $paginationSize;
+  height: $paginationSize;
+  border-radius: 5px;
+  cursor: pointer;
+  span {
+	display: block;
+    font-family: $fontFamily;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: $fontSizePaginations;
+    line-height: $paginationSize;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.paginations__row--flat {
+  margin-bottom: 100px;
+  @include colorItems ($mainColors, ".paginations__list", ".paginations__item");
+  span {
+    background-color: $buttonsBackground;
+  }
+  .paginations__item--arrow span {
+    background-color: $paginationArrows;
+  }
+}
+
+.paginations__row--own {
+  @include gradientItems ($mainColors, ".paginations__list", ".paginations__item");
+  span {
+    @include setGradient($buttonsBackground);
+  }
+  .paginations__item {
+    border: 1px solid $buttonsBackground;
+  }
+}
+
+.paginations__item--active,
+.paginations__item:hover {
+  span {
+    background: transparent;
+    color: white;
+  }
+}
+
+  // Tabs styles
+
+.tabs__list {
+  @include flexible;
+}
+
+.tabs__item {
+  display: block;
+  color: $buttonsBorder;
+  font-size: $fontSizeTabs;
+  font-family: $fontFamily;
+  cursor: pointer;
+  box-sizing: border-box;
+  span {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: block;
+  }
+}
+
+.tabs__row--underlined {
+  width: 1658px;
+  margin-bottom: 160px;
+
+  .tabs__item {
+    padding: 25px 58px;
+    border-bottom: 3px solid $buttonsBackground;
+  }
+    @include colorBorder($tabColors);
+}
+
+.tabs__row--flat {
+  width: 1378px;
+  @include colorItems ($tabColors, ".tabs__list", ".tabs__item");
+  .tabs__list {
+    border: 1px solid $buttonsBackground;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .tabs__item:not(:last-child) {
+    border-right: 1px solid $buttonsBackground;
+  }
+  .tabs__item span {
+    background-color: white;
+    padding: 25px 41px;
+    color: $ownTabsColor;
+  }
+  .tabs__item--active,
+  .tabs__item:hover {
+    span {
+      background: transparent;
+      color: white;
+    }
+  }
+}
+
+
+
+
+

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SCSS task</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/mixins.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="wrapper">
+    <section class="buttons">
+        <h2 class="heading">Buttons</h2>
+        <div class="container buttons__container">
+            <div class="row buttons__row buttons__row--normal">
+                <button class="buttons__item">Button</button>
+                <button class="buttons__item">Button</button>
+                <button class="buttons__item">Button</button>
+                <button class="buttons__item">Button</button>
+                <button class="buttons__item">Button</button>
+            </div>
+            <div class="row buttons__row buttons__row--hover">
+                <button class="buttons__item">Button</button>
+                <button class="buttons__item">Button</button>
+                <button class="buttons__item">Button</button>
+                <button class="buttons__item">Button</button>
+                <button class="buttons__item">Button</button>
+            </div>
+            <div class="row buttons__row buttons__row--active">
+                <button class="buttons__item">Button</button>
+                <button class="buttons__item">Button</button>
+                <button class="buttons__item">Button</button>
+                <button class="buttons__item">Button</button>
+                <button class="buttons__item">Button</button>
+            </div>
+        </div>
+    </section>
+    <section class="checkbox">
+        <h2 class="heading">Check <span>boxes</span></h2>
+        <div class="container checkbox__container">
+            <div class="row checkbox__row checkbox__row--normal">
+                <label class="checkbox__label"><input class="checkbox__item" type="checkbox"><span><i class="fas fa-check"></i></span></label>
+                <label class="checkbox__label"><input class="checkbox__item" type="checkbox"><span><i class="fas fa-check"></i></span></label>
+                <label class="checkbox__label"><input class="checkbox__item" type="checkbox"><span><i class="fas fa-check"></i></span></label>
+                <label class="checkbox__label"><input class="checkbox__item" type="checkbox"><span><i class="fas fa-check"></i></span></label>
+                <label class="checkbox__label"><input class="checkbox__item" type="checkbox"><span><i class="fas fa-check"></i></span></label>
+            </div>
+            <div class="row checkbox__row checkbox__row--selected">
+                <label class="checkbox__label"><input class="checkbox__item" type="checkbox" checked><span><i class="fas fa-check"></i></span></label>
+                <label class="checkbox__label"><input class="checkbox__item" type="checkbox" checked><span><i class="fas fa-check"></i></span></label>
+                <label class="checkbox__label"><input class="checkbox__item" type="checkbox" checked><span><i class="fas fa-check"></i></span></label>
+                <label class="checkbox__label"><input class="checkbox__item" type="checkbox" checked><span><i class="fas fa-check"></i></span></label>
+                <label class="checkbox__label"><input class="checkbox__item" type="checkbox" checked><span><i class="fas fa-check"></i></span></label>
+            </div>
+            <div class="row checkbox__row checkbox__row--disabled">
+                <label class="checkbox__label"><input class="checkbox__item" type="checkbox" disabled><span><i class="fas fa-check"></i></span></label>
+                <label class="checkbox__label"><input class="checkbox__item" type="checkbox" disabled><span><i class="fas fa-check"></i></span></label>
+                <label class="checkbox__label"><input class="checkbox__item" type="checkbox" disabled><span><i class="fas fa-check"></i></span></label>
+                <label class="checkbox__label"><input class="checkbox__item" type="checkbox" disabled><span><i class="fas fa-check"></i></span></label>
+                <label class="checkbox__label"><input class="checkbox__item" type="checkbox" disabled><span><i class="fas fa-check"></i></span></label>
+            </div>
+        </div>
+    </section>
+    <section class="paginations">
+        <h2 class="heading">Paginations</h2>
+        <div class="container paginations__container">
+            <div class="row paginations__row paginations__row--flat">
+                <ul class="paginations__list">
+                    <li class="paginations__item paginations__item--arrow"><span><i class="fas fa-arrow-left"></i></span></li>
+                    <li class="paginations__item paginations__item--active"><span>1</span></li>
+                    <li class="paginations__item"><span>2</span></li>
+                    <li class="paginations__item"><span>3</span></li>
+                    <li class="paginations__item"><span>4</span></li>
+                    <li class="paginations__item paginations__item--arrow"><span><i class="fas fa-arrow-right"></i></span></li>
+                </ul>
+                <ul class="paginations__list">
+                    <li class="paginations__item paginations__item--arrow"><span><i class="fas fa-arrow-left"></i></span></li>
+                    <li class="paginations__item paginations__item--active"><span>1</span></li>
+                    <li class="paginations__item"><span>2</span></li>
+                    <li class="paginations__item"><span>3</span></li>
+                    <li class="paginations__item"><span>4</span></li>
+                    <li class="paginations__item paginations__item--arrow"><span><i class="fas fa-arrow-right"></i></span></li>
+                </ul>
+                <ul class="paginations__list">
+                    <li class="paginations__item paginations__item--arrow"><span><i class="fas fa-arrow-left"></i></span></li>
+                    <li class="paginations__item paginations__item--active"><span>1</span></li>
+                    <li class="paginations__item"><span>2</span></li>
+                    <li class="paginations__item"><span>3</span></li>
+                    <li class="paginations__item"><span>4</span></li>
+                    <li class="paginations__item paginations__item--arrow"><span><i class="fas fa-arrow-right"></i></span></li>
+                </ul>
+                <ul class="paginations__list">
+                    <li class="paginations__item paginations__item--arrow"><span><i class="fas fa-arrow-left"></i></span></li>
+                    <li class="paginations__item paginations__item--active"><span>1</span></li>
+                    <li class="paginations__item"><span>2</span></li>
+                    <li class="paginations__item"><span>3</span></li>
+                    <li class="paginations__item"><span>4</span></li>
+                    <li class="paginations__item paginations__item--arrow"><span><i class="fas fa-arrow-right"></i></span></li>
+                </ul>
+            </div>
+            <div class="row paginations__row paginations__row--own">
+                <ul class="paginations__list">
+                    <li class="paginations__item paginations__item--arrow"><span><i class="fas fa-arrow-left"></i></span></li>
+                    <li class="paginations__item paginations__item--active"><span>1</span></li>
+                    <li class="paginations__item"><span>2</span></li>
+                    <li class="paginations__item"><span>3</span></li>
+                    <li class="paginations__item"><span>4</span></li>
+                    <li class="paginations__item paginations__item--arrow"><span><i class="fas fa-arrow-right"></i></span></li>
+                </ul>
+                <ul class="paginations__list">
+                    <li class="paginations__item paginations__item--arrow"><span><i class="fas fa-arrow-left"></i></span></li>
+                    <li class="paginations__item paginations__item--active"><span>1</span></li>
+                    <li class="paginations__item"><span>2</span></li>
+                    <li class="paginations__item"><span>3</span></li>
+                    <li class="paginations__item"><span>4</span></li>
+                    <li class="paginations__item paginations__item--arrow"><span><i class="fas fa-arrow-right"></i></span></li>
+                </ul>
+                <ul class="paginations__list">
+                    <li class="paginations__item paginations__item--arrow"><span><i class="fas fa-arrow-left"></i></span></li>
+                    <li class="paginations__item paginations__item--active"><span>1</span></li>
+                    <li class="paginations__item"><span>2</span></li>
+                    <li class="paginations__item"><span>3</span></li>
+                    <li class="paginations__item"><span>4</span></li>
+                    <li class="paginations__item paginations__item--arrow"><span><i class="fas fa-arrow-right"></i></span></li>
+                </ul>
+                <ul class="paginations__list">
+                    <li class="paginations__item paginations__item--arrow"><span><i class="fas fa-arrow-left"></i></span></li>
+                    <li class="paginations__item paginations__item--active"><span>1</span></li>
+                    <li class="paginations__item"><span>2</span></li>
+                    <li class="paginations__item"><span>3</span></li>
+                    <li class="paginations__item"><span>4</span></li>
+                    <li class="paginations__item paginations__item--arrow"><span><i class="fas fa-arrow-right"></i></span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="tabs">
+        <h2 class="heading">Tabs</h2>
+        <div class="tabs__container container">
+            <div class="row tabs__row tabs__row--underlined">
+                <ul class="tabs__list">
+                    <li class="tabs__item tabs__item--active"><span>Cats</span></li>
+                    <li class="tabs__item"><span>Dogs</span></li>
+                    <li class="tabs__item"><span>Birds</span></li>
+                    <li class="tabs__item"><span>Reptiles</span></li>
+                </ul>
+                <ul class="tabs__list">
+                    <li class="tabs__item tabs__item--active"><span>Cats</span></li>
+                    <li class="tabs__item"><span>Dogs</span></li>
+                    <li class="tabs__item"><span>Birds</span></li>
+                    <li class="tabs__item"><span>Reptiles</span></li>
+                </ul>
+            </div>
+            <div class="row tabs__row tabs__row--flat">
+                <ul class="tabs__list">
+                    <li class="tabs__item tabs__item--active"><span>Cats</span></li>
+                    <li class="tabs__item"><span>Dogs</span></li>
+                    <li class="tabs__item"><span>Birds</span></li>
+                    <li class="tabs__item"><span>Reptiles</span></li>
+                </ul>
+                <ul class="tabs__list">
+                    <li class="tabs__item tabs__item--active"><span>Cats</span></li>
+                    <li class="tabs__item"><span>Dogs</span></li>
+                    <li class="tabs__item"><span>Birds</span></li>
+                    <li class="tabs__item"><span>Reptiles</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>
